@@ -10,7 +10,7 @@ class CardContainer extends Component {
         super(props);
         this.state = {
             rooms: [],
-            searchStr: ""
+            searchStr: "",
         }
     }
 
@@ -36,7 +36,13 @@ class CardContainer extends Component {
     }
 
     render() {
-        const {searchStr} = this.state;
+        const {searchStr, rooms} = this.state;
+        let filteredRoom = rooms.filter((item) => {
+            return item
+                .name
+                .toLowerCase()
+                .search(searchStr.toLowerCase()) !== -1;
+        });
 
         return (
             <div>
@@ -50,7 +56,11 @@ class CardContainer extends Component {
                         onChange={searchStr => this.onSearch(searchStr)}
                         value={searchStr}/>
                 </div>
-                <div>{this.renderRoomInfo()}</div>
+                <div>{filteredRoom.map(room => (
+                        <CardDeck key={room.name}>
+                            <CardDetail name={room.name} description={room.description}></CardDetail>
+                        </CardDeck>
+                    ))}</div>
             </div>
         )
     }
