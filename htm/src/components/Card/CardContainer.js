@@ -32,7 +32,7 @@ class CardContainer extends Component {
         });
 
         return (
-            <div>
+            <div id="cardContainer">
                 <Alert color="dark">
                     Search for room today
                 </Alert>
