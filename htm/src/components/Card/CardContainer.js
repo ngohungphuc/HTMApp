@@ -27,8 +27,7 @@ class CardContainer extends Component {
     render() {
         const {searchStr, rooms} = this.state;
         let filteredRoom = rooms.filter((item) => {
-            return (item.name.toLowerCase().search(searchStr.toLowerCase()) !== -1 ||
-                item.description.toLowerCase().search(searchStr.toLowerCase()) !== -1);
+            return (item.name.toLowerCase().search(searchStr.toLowerCase()) !== -1 || item.description.toLowerCase().search(searchStr.toLowerCase()) !== -1);
         });
 
         return (
@@ -42,6 +41,13 @@ class CardContainer extends Component {
                         type="input"
                         onChange={searchStr => this.onSearch(searchStr)}
                         value={searchStr}/>
+                </div>
+                <div>
+                    {filteredRoom.length === 0
+                        ? <Alert id="emptyAlert" color="danger">
+                                Your search criteria return no result!
+                            </Alert>
+                        : null}
                 </div>
                 <div>{filteredRoom.map(room => (
                         <CardDeck key={room.name}>

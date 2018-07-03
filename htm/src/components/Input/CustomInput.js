@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Form, FormGroup, Label, Input} from 'reactstrap';
+import {Label, Input} from 'reactstrap';
 
 const CustomInput = (props) => {
     return (

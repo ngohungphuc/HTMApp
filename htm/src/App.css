@@ -44,7 +44,12 @@
   height: 285px;
 }
 
-#searchStr {
+#emptyAlert {
+  margin-top: 10px !important;
+}
+
+#searchStr,
+#emptyAlert {
   width: 400px;
   margin: auto;
 }
