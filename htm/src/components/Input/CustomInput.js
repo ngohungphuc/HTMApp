@@ -5,19 +5,14 @@ import {Form, FormGroup, Label, Input} from 'reactstrap';
 const CustomInput = (props) => {
     return (
         <div>
-            <Form>
-                <FormGroup>
-                    <Label for={props.name}>{props.label}</Label>
-                    <Input
-                        type={props.type}
-                        name={props.name}
-                        id={props.name}
-                        placeholder={props.placeholder}
-                        value={props.value}
-                        onChange={props.onChange}
-                        />
-                </FormGroup>
-            </Form>
+            <Label for={props.name}>{props.label}</Label>
+            <Input
+                type={props.type}
+                name={props.name}
+                id={props.name}
+                placeholder={props.placeholder}
+                value={props.value}
+                onChange={props.onChange}/>
         </div>
     );
 };

@@ -1,5 +1,6 @@
 import sinon from 'sinon';
-export const ContainerMockData = {
+
+export const CardDetailMockData = {
     name: "",
     description: ""
 };
