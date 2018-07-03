@@ -1,10 +1,12 @@
+import sinon from 'sinon';
 export const ContainerMockData = {
     name: "",
     description: ""
 };
 
 export const InputMockData = {
-    name: "",
-    type: "",
-    value: ""
+    name: "12",
+    type: "input",
+    value: "",
+    onChange: sinon.spy()
 }
