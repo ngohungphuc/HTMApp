@@ -18,17 +18,6 @@ class CardContainer extends Component {
         this.setState({rooms: data});
     }
 
-    renderRoomInfo() {
-        return this
-            .state
-            .rooms
-            .map(room => (
-                <CardDeck key={room.name}>
-                    <CardDetail name={room.name} description={room.description}></CardDetail>
-                </CardDeck>
-            ));
-    }
-
     onSearch = e => {
         this.setState({
             [e.target.name]: e.target.value
