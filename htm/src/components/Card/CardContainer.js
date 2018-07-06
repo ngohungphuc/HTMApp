@@ -27,7 +27,8 @@ class CardContainer extends Component {
     render() {
         const {searchStr, rooms} = this.state;
         let filteredRoom = rooms.filter((item) => {
-            return (item.name.toLowerCase().search(searchStr.toLowerCase()) !== -1 || item.description.toLowerCase().search(searchStr.toLowerCase()) !== -1);
+            return (item.name.toLowerCase().search(searchStr.toLowerCase()) !== -1
+                || item.description.toLowerCase().search(searchStr.toLowerCase()) !== -1);
         });
 
         return (
