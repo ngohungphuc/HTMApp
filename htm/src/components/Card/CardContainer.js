@@ -1,5 +1,5 @@
-import React, {Component} from 'react'
-import {CardDeck, Alert} from 'reactstrap';
+import React, { Component } from 'react'
+import { CardDeck, Alert } from 'reactstrap';
 import data from '../../data/properties.json';
 
 import CardDetail from "./CardDetail";
