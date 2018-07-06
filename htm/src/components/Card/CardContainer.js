@@ -49,11 +49,15 @@ class CardContainer extends Component {
                             </Alert>
                         : null}
                 </div>
-                <div>{filteredRoom.map(room => (
-                        <CardDeck key={room.name}>
-                            <CardDetail name={room.name} description={room.description}></CardDetail>
-                        </CardDeck>
-                    ))}</div>
+                <div className="row" id="roomList">
+                    {filteredRoom.map(room => (
+                        <div className="col-6 col-md-4">
+                            <CardDeck key={room.name} className="cardList">
+                                <CardDetail name={room.name} description={room.description}></CardDetail>
+                            </CardDeck>
+                        </div>
+                    ))}
+                </div>
             </div>
         )
     }
