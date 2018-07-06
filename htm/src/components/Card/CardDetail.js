@@ -4,7 +4,7 @@ import { Card, Button, CardHeader, CardBody, CardText } from 'reactstrap';
 
 const CardDetail = props => {
     return (
-        <Card>
+        <Card className="roomInfo">
             <CardHeader>{props.name}</CardHeader>
             <CardBody>
                 <CardText>{props.description}</CardText>
