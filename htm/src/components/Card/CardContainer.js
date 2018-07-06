@@ -18,6 +18,10 @@ class CardContainer extends Component {
         this.setState({rooms: data});
     }
 
+    componentWillUpdate() {
+        console.log('1')
+    }
+
     onSearch = e => {
         this.setState({
             [e.target.name]: e.target.value
@@ -52,8 +56,8 @@ class CardContainer extends Component {
                 </div>
                 <div className="row" id="roomList">
                     {filteredRoom.map(room => (
-                        <div className="col-6 col-md-4">
-                            <CardDeck key={room.name} className="cardList">
+                        <div className="col-6 col-md-4" key={room.name}>
+                            <CardDeck className="cardList">
                                 <CardDetail name={room.name} description={room.description}></CardDetail>
                             </CardDeck>
                         </div>
