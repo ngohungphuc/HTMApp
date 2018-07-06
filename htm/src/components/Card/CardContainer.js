@@ -18,10 +18,6 @@ class CardContainer extends Component {
         this.setState({rooms: data});
     }
 
-    componentWillUpdate() {
-        console.log('1')
-    }
-
     onSearch = e => {
         this.setState({
             [e.target.name]: e.target.value
